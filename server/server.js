@@ -6,6 +6,10 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
+app.get("/",(req, res) => {
+  res.send(`<h2>Le bhenklvde ab dikh gya .. <br><br/>Server Started on 3000</h2>`)
+})
+
 app.post("/calculate", (req, res) => {
   try {
     const result = eval(req.body.expression);
